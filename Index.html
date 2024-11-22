@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <style>
-      .style {
-        border: solid 1px #ccc;
-        background: transparent;
-        outline: none;
-      }
-    </style>
     <title>Login</title>
   </head>
   <body class="bg-white vh-100 overflow-hidden">
@@ -32,17 +25,18 @@
 
                   <div>
                     <label for="Password" class="fw-bold d-block">Password*</label>
-                    <input type="password" id="Username" required class="w-75 border-0 mb-4 ps-3" style="background-color: #d9d9d9; height: 40px; border-radius: 10px" />
+                    <input type="password" id="Password" required class="w-75 border-0 mb-4 ps-3" style="background-color: #d9d9d9; height: 40px; border-radius: 10px" />
                   </div>
 
                   <div>
-                    <button onclick="" type="button" class="d-block border-0 w-75 mt-2 text-white fw-bold" style="background-color: #6d66ff; height: 40px; border-radius: 10px">Login</button>
+                    <button onclick="Login()" type="button" class="d-block border-0 w-75 mt-2 text-white fw-bold" style="background-color: #6d66ff; height: 40px; border-radius: 10px">Login</button>
                   </div>
 
                   <div class="mt-4 w-75 text-center">
                     <p>Don't have an acount? <a href="Registrasi.html" class="text-danger">Sign Up</a></p>
                   </div>
                 </form>
+                <p id="Pesan" class="error-message text-danger fst-italic" style="display: none">Maaf, username atau password salah!</p>
                 <div class="row mt-5">
                   <p class="mt-5 fs-6 text-black-50">@Copyright by 22552011284_IrpanMaulana_Kelas_222w</p>
                 </div>
@@ -55,5 +49,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function Login() {
+        const Username = document.getElementById("Username").value;
+        const Password = document.getElementById("Password").value;
+        const errorMessage = document.getElementById("Pesan");
+        errorMessage.style.display = "none";
+
+        if (Username == "Irpan" && Password == 123) {
+          window.location.href = "dashboard.html";
+        } else {
+          errorMessage.style.display = "Block";
+        }
+      }
+    </script>
   </body>
 </html>

@@ -4,8 +4,622 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <style>
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .shape-circle {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: #ffe0e0;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: #ffe0e0;
+        box-shadow: 0 100px 120px rgb(255, 205, 205);
+      }
+
+      .shape-small {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #ffe0e0;
+        border-radius: 50%;
+        left: -30px;
+        top: 10px;
+        z-index: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      .col-7 img {
+        z-index: 2;
+      }
+      .image-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .rounded-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .rounded-image:hover {
+        transform: scale(1.05);
+      }
+    </style>
     <title>Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Irpan It Company</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#beranda" onclick="showPage('beranda')">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang" onclick="showPage('tentang')">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak" onclick="showPage('kontak')">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+    <!-- hero section -->
+    <div class="container-fluid" id="beranda" style="background-color: #f8f8f8">
+      <div class="container">
+        <div class="row">
+          <div class="col-5 d-flex justify-content-center align-items-center">
+            <div style="position: relative">
+              <span class="shape-small"></span>
+              <h1 class="fs-1 font-raleway fw-bold" style="line-height: 1.3; position: relative; z-index: 1">
+                <span class="text-danger fs-4 font-raleway fw-bold">We Are Here</span>
+                <br />
+                Better Insight for
+                <br />
+                Business Growth
+              </h1>
+              <button onclick="window.location.href='Detail.html'" class="bg-danger text-white border rounded-3 font-raleway" style="height: 45px; width: 145px">View More</button>
+            </div>
+          </div>
+          <div class="col-7 d-flex position-relative justify-content-center align-items-center">
+            <div class="shape-circle"></div>
+
+            <img src="asset/profile_IrpanMaulana-removebg-preview.png" class="w-50 position-relative" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- akhir hero section -->
+    <!-- about -->
+    <div class="container-fluid pt-5 pb-5" style="background-color: #f7f7f7">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="w-100 overflow-hidden mb-5">
+              <img src="asset/jason-goodman-bzqU01v-G54-unsplash.jpg" class="d-block w-100" style="border-radius: 15px; object-fit: cover; height: 250px" alt="" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="position-relative">
+              <h1 class="font-raleway fs-2 fw-bold" style="color: #0e1f51">
+                <span class="shape-small font-raleway"></span>
+                <span class="fs-5 text-danger" id="tentang">About Us</span>
+                <br />
+                One of the Fastest Way to
+                <br />
+                Business Growth
+              </h1>
+              <p class="w-75">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                opposed
+              </p>
+              <!-- box order -->
+              <div class="w-100 bg-white" style="border-radius: 10px">
+                <div class="row align-items-center">
+                  <div class="col-2 my-2 d-flex justify-content-center align-items-center">
+                    <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center">
+                      <i class="bi bi-headset text-dark fs-3"></i>
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <h1 class="fs-6 mb-1" style="color: #0e1f51">Get Instant Professional Advice</h1>
+                    <p class="mb-0">Ready to Help: <span class="fw-bold text-danger">+62 8964 8260 834</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- akhir box order -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir about -->
+    <!-- planning -->
+    <div class="container-fluid bg-white mt-5 mb-5">
+      <div class="container">
+        <div class="text-center">
+          <span class="fs-4 fw-bold text-danger font-raleway">Planning</span>
+          <h1 class="fs-2 fw-bold font-raleway">Our Process</h1>
+        </div>
+        <div class="row mt-5">
+          <!-- box pertamana -->
+          <div class="col-3">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">01</h1>
+              <!-- icon -->
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-search text-dark fs-3"></i>
+              </div>
+              <!-- akhir icon -->
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Research</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distra by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box pertama -->
+          <!-- box kedua -->
+          <div class="col-3">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">01</h1>
+              <!-- icon -->
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-vector-pen text-dark fs-3"></i>
+              </div>
+              <!-- akhir icon -->
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Design</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distra by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box kedua -->
+          <!-- box ketiga -->
+          <div class="col-3">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">01</h1>
+              <!-- icon -->
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-code text-dark fs-3"></i>
+              </div>
+              <!-- akhir icon -->
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Develope</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distra by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box ketiga -->
+          <!-- box keempat -->
+          <div class="col-3">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">01</h1>
+              <!-- icon -->
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-bug text-dark fs-3"></i>
+              </div>
+              <!-- akhir icon -->
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Test</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distra by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box keempat -->
+        </div>
+      </div>
+    </div>
+    <!-- akhir planning -->
+    <!-- what we do -->
+    <div class="container-fluid pt-5 pb-5" style="background-color: #f7f7f7">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="w-100 overflow-hidden mb-5">
+              <img src="asset/team-working-together-project.jpg" class="d-block w-100" style="border-radius: 15px; object-fit: cover; height: 250px" alt="" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="position-relative">
+              <h1 class="font-raleway fs-2 fw-bold" style="color: #0e1f51">
+                <span class="shape-small font-raleway"></span>
+                <span class="fs-5 text-danger" id="tentang">What We Do</span>
+                <br />
+                We Develope Product That
+                <br />
+                People Love to Use.
+              </h1>
+              <p class="w-75">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                opposed
+              </p>
+              <!-- box order -->
+              <div class="row">
+                <!-- Box pertama -->
+                <div class="col-6">
+                  <div class="w-100 bg-white p-3" style="border-radius: 10px">
+                    <div class="d-flex align-items-center">
+                      <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center">
+                        <i class="bi bi-lightbulb text-dark fs-3"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h1 class="fs-6 mb-1" style="color: #0e1f51">Our Vision</h1>
+                        <p class="mb-0">
+                          It is a long esta <br />
+                          -blished fact that
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Box kedua -->
+                <div class="col-6">
+                  <div class="w-100 bg-white p-3" style="border-radius: 10px">
+                    <div class="d-flex align-items-center">
+                      <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center">
+                        <i class="bi bi-trophy text-dark fs-3"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h1 class="fs-6 mb-1" style="color: #0e1f51">Our Goal</h1>
+                        <p class="mb-0">
+                          It is a long esta <br />
+                          -blished fact that
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- akhir box order -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir what we do -->
+    <!-- awal our experience -->
+    <div class="container-fluid bg-white mt-5 mb-5">
+      <div class="container">
+        <div class="text-center">
+          <span class="fs-4 fw-bold text-danger font-raleway">Services</span>
+          <h1 class="fs-2 fw-bold font-raleway">Our Experience</h1>
+        </div>
+        <!-- Baris Pertama -->
+        <div class="row mt-5">
+          <!-- box pertama -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">01</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-laptop text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Web Design/ Development</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- box kedua -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">02</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-vector-pen text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">UI/UX</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- box ketiga -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">03</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-cloud-arrow-up text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Website Migration</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+        </div>
+        <!-- Baris Kedua -->
+        <div class="row mt-4">
+          <!-- box keempat -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">04</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-phone text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">App Development</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- box kelima -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">04</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-gear text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Hubspot Integration</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box ke lima -->
+          <!-- box ke enam -->
+          <div class="col-4">
+            <div class="card border-0 shadow-lg" style="background-color: #f7f7f7; border-radius: 10px">
+              <h1 class="text-black-50 me-2 font-raleway" style="text-align: right">04</h1>
+              <div style="background-color: #cecece; border-radius: 10px; width: 70px; height: 70px" class="d-flex justify-content-center align-items-center ms-3 mb-3">
+                <i class="bi bi-envelope text-dark fs-3"></i>
+              </div>
+              <h1 class="font-raleway fs-4 ms-lg-3 fw-bold" style="color: #0e1f51">Email Marketing</h1>
+              <div class="d-flex align-items-center w-50">
+                <hr class="flex-grow-1 custom-hr ms-3" style="background-color: #ff3e54" />
+                <div style="width: 3px"></div>
+                <hr class="flex-grow-1 custom-hr me-3" style="background-color: #ff3e54" />
+              </div>
+              <div class="w-75 ms-lg-3"><p class="font-raleway" style="font-size: small; text-align: justify">It is a long established fact that a reader will be distracted by the readable content of a page.</p></div>
+            </div>
+          </div>
+          <!-- akhir box ke 6 -->
+        </div>
+      </div>
+    </div>
+    <!-- akhir our experience -->
+    <!-- team it company -->
+    <div class="container-fluid bg-white mt-5 mb-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="fs-4 fw-bold text-danger font-raleway">Team</span>
+          <h1 class="fs-2 fw-bold font-raleway">Our Leaders</h1>
+        </div>
+        <div class="row justify-content-center">
+          <!-- Gambar 1 -->
+          <div class="col-3">
+            <div class="image-container">
+              <img src="asset/profile_IrpanMaulana-removebg-preview.png" alt="Process 1" class="rounded-image img-fluid" />
+            </div>
+            <h1 class="fs-3 text-center text-danger mt-3">Irpan Maulana</h1>
+            <p class="text-center" style="font-weight: 600">CEO</p>
+          </div>
+          <!-- Gambar 2 -->
+          <div class="col-3">
+            <div class="image-container">
+              <img src="asset/IMG_20220626_194432.jpg" alt="Process 2" class="rounded-image img-fluid" />
+            </div>
+            <h1 class="fs-3 text-center text-danger mt-3">Irpan Maulana</h1>
+            <p class="text-center" style="font-weight: 600">CTO</p>
+          </div>
+          <!-- Gambar 3 -->
+          <div class="col-3">
+            <div class="image-container">
+              <img src="asset/IMG_20241027_192343_263.jpg" alt="Process 3" class="rounded-image img-fluid" />
+            </div>
+            <h1 class="fs-3 text-center text-danger mt-3">Irpan Maulana</h1>
+            <p class="text-center" style="font-weight: 600">CFO</p>
+          </div>
+          <!-- Gambar 4 -->
+          <div class="col-3">
+            <div class="image-container">
+              <img src="asset/IMG_20241122_010157.jpg" alt="Process 4" class="rounded-image img-fluid" />
+            </div>
+            <h1 class="fs-3 text-center text-danger mt-3">Irpan Maulana</h1>
+            <p class="text-center" style="font-weight: 600">COO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir it company -->
+    <!-- order jasa -->
+    <div class="container-fluid pb-5" id="kontak" style="background-color: #0e1f51">
+      <div class="container pt-5">
+        <div class="text-center">
+          <h1 class="text-danger font-raleway fs-4 fw-bold">Get in Touch</h1>
+          <h1 class="font-raleway text-white fs-2 fw-bold">Hey! Let's Talk</h1>
+          <div class="row mt-5 justify-content-evenly">
+            <!-- Form Section -->
+            <div class="col-8 bg-white" style="border-radius: 15px">
+              <form action="">
+                <!-- Nama -->
+                <div class="w-75 mt-3">
+                  <input type="text" name="nama" placeholder="Nama" class="w-75 border-0 ps-3" style="height: 40px; border-radius: 10px; background-color: #f7f7f7" />
+                </div>
+                <!-- Email -->
+                <div class="w-75 mt-3">
+                  <input type="text" name="email" placeholder="Email" class="w-75 border-0 ps-3" style="height: 40px; border-radius: 10px; background-color: #f7f7f7" />
+                </div>
+                <!-- Phone -->
+                <div class="w-75 mt-3">
+                  <input type="text" name="phone" placeholder="Phone" class="w-75 border-0 ps-3" style="height: 40px; border-radius: 10px; background-color: #f7f7f7" />
+                </div>
+                <!-- Message -->
+                <div class="w-75 mt-3">
+                  <textarea name="message" placeholder="Your Message" class="w-75 border-0 ps-3" style="height: 100px; border-radius: 10px; background-color: #f7f7f7; resize: none"></textarea>
+                </div>
+                <!-- Button -->
+                <div class="ms-4 mt-4 mb-4" style="text-align: left; margin-left: 10px">
+                  <button class="bg-danger text-white border rounded-3 ms-5 font-raleway" style="height: 45px; width: 145px">Send Me</button>
+                </div>
+              </form>
+            </div>
+            <!-- Info Section -->
+            <div class="col-3 bg-white" style="border-radius: 15px; padding: 20px">
+              <!-- Telephone -->
+              <div class="row mb-4">
+                <div class="shadow-lg col-4 d-flex align-items-center justify-content-center" style="background-color: #f7f7f7; border-radius: 10px; height: 60px; width: 60px">
+                  <i class="bi bi-telephone text-dark fs-3"></i>
+                </div>
+                <div class="col-8">
+                  <h1 class="fs-6 font-raleway text-danger fw-bold">
+                    Call Anytime
+                    <br />
+                    <p class="text-black-50 fw-normal">+6289648260834</p>
+                  </h1>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="row mb-4">
+                <div class="shadow-lg col-4 d-flex align-items-center justify-content-center" style="background-color: #f7f7f7; border-radius: 10px; height: 60px; width: 60px">
+                  <i class="bi bi-envelope text-dark fs-3"></i>
+                </div>
+                <div class="col-8">
+                  <h1 class="fs-6 font-raleway text-danger fw-bold">
+                    Send Email
+                    <br />
+                    <p class="text-black-50 fw-normal">irpansmaulana99@gmail.com</p>
+                  </h1>
+                </div>
+              </div>
+              <!-- Location -->
+              <div class="row">
+                <div class="shadow-lg col-4 d-flex align-items-center justify-content-center" style="background-color: #f7f7f7; border-radius: 10px; height: 60px; width: 60px">
+                  <i class="bi bi-geo-alt text-dark fs-3"></i>
+                </div>
+                <div class="col-8">
+                  <h1 class="fs-6 font-raleway text-danger fw-bold">
+                    Visit Us
+                    <br />
+                    <p class="text-black-50 fw-normal">Jl. kp sukajaya rt 04 rw 04</p>
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <h1 class="fs-6">Follow us</h1>
+                <div class="row mt-2" style="display: flex; gap: 7px; flex-wrap: nowrap">
+                  <!-- Menambahkan gap antar kolom -->
+                  <!-- instagram -->
+                  <div class="col-3 rounded-3 bg-danger">
+                    <a href="https://www.instagram.com/irpaneenyu/">
+                      <i class="bi bi-instagram text-white fs-3"></i>
+                    </a>
+                  </div>
+                  <!-- linkedin -->
+                  <div class="col-2 rounded-3 bg-danger w-25">
+                    <a href="https://www.linkedin.com/in/irpan-maulana-85820333a/">
+                      <i class="bi bi-linkedin text-white fs-3"></i>
+                    </a>
+                  </div>
+                  <!-- facebook -->
+                  <div class="col-3 rounded-3 bg-danger w-25">
+                    <a href="">
+                      <i class="bi bi-facebook text-white fs-3"></i>
+                    </a>
+                  </div>
+                  <!-- tiktok -->
+                  <div class="col-3 rounded-3 bg-danger w-25">
+                    <a href="https://www.tiktok.com/@irpanrealll">
+                      <i class="bi bi-tiktok text-white fs-3"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir order jasa -->
+    <!-- footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Services Column -->
+          <div class="col-md-4">
+            <h5 class="fw-bold">Services</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Web Development</a></li>
+              <li><a href="#" class="text-white">Mobile App Development</a></li>
+              <li><a href="#" class="text-white">SEO Optimization</a></li>
+              <li><a href="#" class="text-white">Digital Marketing</a></li>
+            </ul>
+          </div>
+
+          <!-- Career Column -->
+          <div class="col-md-4">
+            <h5 class="fw-bold">Career</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Job Opportunities</a></li>
+              <li><a href="#" class="text-white">Internships</a></li>
+              <li><a href="#" class="text-white">Work Culture</a></li>
+              <li><a href="#" class="text-white">Employee Testimonials</a></li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Us Column -->
+          <div class="col-md-4">
+            <h5 class="fw-bold">Subscribe Us</h5>
+            <form>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Enter your email" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <p class="mt-5 fs-6 text-white">@Copyright by 22552011284_IrpanMaulana_Kelas_222w</p>
+      </div>
+    </footer>
+
+    <!-- akhit footer -->
+  </body>
 </html>
